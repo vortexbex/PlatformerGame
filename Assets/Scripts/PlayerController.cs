@@ -51,6 +51,7 @@ public class PlayerController : MonoBehaviour {
     {
         if (other.tag == "Coin")
         {
+            Debug.Log(other.tag);
             coins++;
             UpdateScoreText();
             Destroy(other.gameObject);
@@ -60,10 +61,11 @@ public class PlayerController : MonoBehaviour {
         else if (other.tag == "DeadZone")
         { 
             Application.LoadLevel("Level_01");
-            Debug.Log("Hello!");
+            Debug.Log(other.tag);
         }
         else if (other.tag == "Finish")
         {
+            Debug.Log(other.tag);
             rigidBody.isKinematic = true;
             coins = coins + 10;
             UpdateScoreText();
