@@ -58,8 +58,9 @@ public class PlayerController : MonoBehaviour {
             audioSource.Play();
         }
         else if (other.tag == "DeadZone")
-        {
+        { 
             Application.LoadLevel("Level_01");
+            Debug.Log("Hello!");
         }
         else if (other.tag == "Finish")
         {
